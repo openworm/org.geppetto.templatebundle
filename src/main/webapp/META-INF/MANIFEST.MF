@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1370969292024
+Build-Jdk: 1.6.0_32
+Built-By: jrmartin
+Bundle-ClassPath: .
+Bundle-ManifestVersion: 2
+Bundle-Name: templatebundle
+Bundle-SymbolicName: org.geppetto.templatebundle
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.geppetto.templatebundle.bundleactivator;version="0.0
+ .1.SNAPSHOT"
+Tool: Bnd-1.50.0

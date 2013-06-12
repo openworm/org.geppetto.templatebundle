@@ -5,7 +5,7 @@
 	<artifactId>templatebundle</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>templatebundle</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.0.0.RELEASE</spring.version>
@@ -52,17 +52,16 @@
 				<configuration>
 					<manifestLocation>src/main/webapp/META-INF</manifestLocation>
 					<supportedProjectTypes>
-						<supportedProjectType>war</supportedProjectType>
+						<supportedProjectType>jar</supportedProjectType>
 						<supportedProjectType>bundle</supportedProjectType>
 					</supportedProjectTypes>
 					<instructions>
 						<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-ClassPath>.,{maven-dependencies},WEB-INF/classes</Bundle-ClassPath>
-						<Web-ContextPath>org.geppetto.frontend</Web-ContextPath>
-						<Import-Package>org.eclipse.virgo.web.dm;version="2.1.1.RELEASE",*</Import-Package>
-						<Import-Library>org.springframework.spring;version="${spring.version}"</Import-Library>
+						<Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
+						<Include-Resource>
+							{maven-resources},META-INF/spring=src/main/java/META-INF/spring
+						</Include-Resource>
 					</instructions>
 				</configuration>
 				<executions>
@@ -75,19 +74,6 @@
 						<inherited>true</inherited>
 					</execution>
 				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.3</version>
-				<configuration>
-					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
-					<warName>org.geppetto.templatebundle</warName>
-					<archive>
-						<manifestFile>src/main/webapp/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
-				</configuration>
 			</plugin>
 
 		</plugins>
