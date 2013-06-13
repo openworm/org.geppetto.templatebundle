@@ -31,6 +31,12 @@
 			<artifactId>org.springframework.web</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.spring-library</artifactId>
+			<type>libd</type>
+			<version>${spring.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 	<plugins>
