@@ -9,5 +9,5 @@
 
 	<!-- Exports the service implementation to other bundles by its service interface -->
 
-	<osgi:reference id="helloWorld" interface="org.geppetto.templateBundle.bundleactivator"/>
+	<osgi:reference id="templateBundle" interface="org.geppetto.templateBundle"/>
 </beans>
