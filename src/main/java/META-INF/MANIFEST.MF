@@ -6,8 +6,8 @@ Bundle-ClassPath: .
 Bundle-ManifestVersion: 2
 Bundle-Name: Template Bundle
 Bundle-SymbolicName: org.geppetto.templatebundle
-Bundle-Version: 0.0.1.SNAPSHOT
+Bundle-Version: 0.0.1
 Created-By: Apache Maven Bundle Plugin
-Export-Package: org.geppetto.templatebundle.bundleactivator;version="0.0
- .1.SNAPSHOT"
+Export-Package: org.geppetto.templatebundle;version="0.0
+ .1"
 Tool: Bnd-1.50.0
