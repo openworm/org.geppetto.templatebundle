@@ -8,6 +8,4 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- Exports the service implementation to other bundles by its service interface -->
-
-	<osgi:reference id="templateBundle" interface="org.geppetto.templateBundle"/>
 </beans>
